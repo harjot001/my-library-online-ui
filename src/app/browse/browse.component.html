@@ -1,0 +1,16 @@
+<p>browse works!</p>
+
+<h2>Resources list</h2>
+<ul class="resources">
+  <!-- <li *ngFor="let resource of resources" [class.selected]="resource === selectedResource" (click)="onSelect(resource)">
+    <span class="badge">{{resource.id}}</span> {{resource.name}}
+  </li> -->
+  <li *ngFor="let resource of resources">
+    <a routerLink="/resourceDetails/{{resource.resourceId}}">
+      <span class="badge">{{resource.resourceId}}</span> {{resource.resourceName}}
+    </a>
+  </li>
+</ul>
+
+
+<!-- <app-resource-details [resource] = "selectedResource"></app-resource-details> -->

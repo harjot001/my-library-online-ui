@@ -1,0 +1,15 @@
+<p>resource-details works!</p>
+
+
+<div *ngIf="resource">
+    <div><span>id: </span>{{resource.resourceId}}</div>
+    <div><span>name: </span>{{resource.resourceName | uppercase}}</div> 
+    <div>
+        <label for="name">Resource name: </label>
+        <input id="name" [(ngModel)]="resource.resourceName" placeholder="name">
+    </div>
+</div>
+
+
+<button (click)="goBack()">go back</button>
+
