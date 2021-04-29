@@ -9,8 +9,9 @@ const routes: Routes = [
   { path: '', redirectTo: '/browse', pathMatch: 'full' },
   { path: 'browse', component: BrowseComponent },
   { path: 'dashboard', component: DashboardComponent },
+  { path: 'events', component: DashboardComponent },
   { path: 'resourceDetails/:resourceId', component: ResourceDetailsComponent },
-  { path: 'searchResults', component: SearchResultsComponent },
+  { path: 'searchResults/:criterion/:searchKeyword', component: SearchResultsComponent },
 ];
 
 @NgModule({

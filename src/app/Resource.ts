@@ -1,4 +1,7 @@
 export interface Resource{
-    id: number;
-    name: string;
+    resourceId: number;
+    resourceName: string;
+    authorName: string;
+    description: string;
+    publicationYear: number
 }

@@ -1,13 +1,30 @@
-<p>resource-details works!</p>
 
 
 <div *ngIf="resource">
-    <div><span>id: </span>{{resource.resourceId}}</div>
-    <div><span>name: </span>{{resource.resourceName | uppercase}}</div> 
-    <div>
+    <!-- <div><span>id: </span>{{resource.resourceId}}</div>
+    <div><span>name: </span>{{resource.resourceName | uppercase}}</div>  -->
+    <!-- <div>
         <label for="name">Resource name: </label>
         <input id="name" [(ngModel)]="resource.resourceName" placeholder="name">
+    </div> -->
+</div>
+
+<div class="container" *ngIf="resource">
+    <div class="row justify-content-between">
+        <div>
+            <!-- <div><span>id: </span>{{resource.resourceId}}</div> -->
+            <div><span>Title: </span>{{resource.resourceName | uppercase}}</div>
+            <div><span>Author: </span>{{resource.authorName}}</div>
+            <div><span>Publication Year: </span>{{resource.publicationYear}}</div>
+            <div><span>Description: </span>{{resource.description}}</div>
+        </div>
+
+        <div>
+                <button type="button" class="btn btn-primary btn-lg btn-block">Place Hold</button>
+                <button type="button" class="btn btn-primary btn-lg btn-block">Save For Later</button>
+        </div>
     </div>
+
 </div>
 
 

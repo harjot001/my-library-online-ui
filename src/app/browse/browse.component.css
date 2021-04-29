@@ -1,9 +1,9 @@
 /* resourcesComponent's private CSS styles */
 .resources {
-  margin: 0 0 2em 0;
+  margin: 2em 2em 4em 0;
   list-style-type: none;
-  padding: 0;
-  width: 15em;
+  padding: 20px;
+  width: 40em;
 }
 .resources li {
   position: relative;

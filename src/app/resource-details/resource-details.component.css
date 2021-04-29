@@ -8,10 +8,11 @@ label {
   }
   button {
     margin-top: 20px;
-    background-color: #eee;
+    background-color: lightgray  ;
     padding: 1rem;
     border-radius: 4px;
-    font-size: 1rem;
+    font-size: 1.5rem;
+    color:  #FA8072 ;
   }
   button:hover {
     background-color: #cfd8dc;
@@ -20,4 +21,9 @@ label {
     background-color: #eee;
     color: #ccc;
     cursor: auto;
+  }
+
+  span{
+    font-weight: bold;
+
   }

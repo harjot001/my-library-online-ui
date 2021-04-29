@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col-4" >
+                <img src="../../assets/images/lib-icon.png" width="150px" height="150px">
+                <label>My Library Online</label>
+            </div>
+
+            <div class="col-4" >
+                <mat-form-field appearance="fill">
+                    <mat-label>Search By</mat-label>
+                    <mat-select id="criteriaSelect" [(ngModel)]="selectedCriterion">
+                        <mat-option *ngFor="let criterion of criteria" [value]="criterion.value">
+                            {{criterion.viewValue}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field >
+                    <input matInput placeholder="Search text" id="searchKeywordInput" [(ngModel)]="searchText">
+                    </mat-form-field>
+
+                <button class="mat-button" >
+                  <!-- <a  routerLink="/searchResults/{{selectedCriterion}}/{{searchText}}" (click) = searchResource()>Search</a>  -->
+                  <a  (click) = searchResource()>Search</a> 
+                </button>
+            </div>
+        </div>
+    </div> 
+</nav>

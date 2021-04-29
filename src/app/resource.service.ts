@@ -12,27 +12,37 @@ export class ResourceService {
 
   private resourcesURL = 'http://localhost:5008/resources/browseResources';
   private resourcesDetailsURL = 'http://localhost:5008/resources/getResourceDetails/';
+  private searchResourceURL = 'http://localhost:5008/resources/searchResource/';
 
   constructor(
     private http: HttpClient
   ) { }
 
-  // getResources(): Observable<Resource[]> {
-  //   const resources = of(RESOURCES);
-  //   return resources;
-  // }
-
+  /**
+   * Ths function get list of all resources available
+   * @returns 
+   */
   getResources(): Observable<any> {
     return this.http.get<any>(this.resourcesURL)
   }
 
+  /**
+   * This function returns details of the given resource 
+   * @param resourceId 
+   * @returns 
+   */
   getResource(resourceId: number): Observable<any> {
     return this.http.get<any>(this.resourcesDetailsURL + resourceId)
   }
 
-  // getResource(id: number): Observable<Resource> {
-  //   const resource = RESOURCES.find(r => r.id === id) as Resource;
-  //   // this.messageService.add(`ResourceService: fetched resource id=${id}`);
-  //   return of(resource);
-  // }
+  /**
+   * This function returns the list fo resources which match the search criteria
+   * @param criterion 
+   * @param searchKeyword 
+   * @returns 
+   */
+  searchResource(criterion: string, searchKeyword:string):Observable<any>{
+    return this.http.get<any>(this.searchResourceURL + criterion + '/' + searchKeyword)
+  }
+
 }

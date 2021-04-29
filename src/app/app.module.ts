@@ -11,6 +11,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { SearchResultsComponent } from './search-results/search-results.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { HeaderComponent } from './header/header.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -19,13 +25,19 @@ import { HttpClientModule } from '@angular/common/http';
     DashboardComponent,
     BrowseComponent,
     ResourceDetailsComponent,
-    SearchResultsComponent
+    SearchResultsComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    MatFormFieldModule,
+    MatInputModule,
+    BrowserAnimationsModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

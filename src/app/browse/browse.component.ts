@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Resource } from '../Resource';
-// import { RESOURCES } from '../mock-resources';
 import { ResourceService } from '../resource.service';
 
 @Component({
@@ -11,20 +10,13 @@ import { ResourceService } from '../resource.service';
 export class BrowseComponent implements OnInit {
 
   constructor(private resourceService:ResourceService) { 
-    // this.resources = resourceService.getResources()
   }
 
   resources : Resource[] = [];
 
-  // selectedResource?: Resource;
-
-//   onSelect(resource: Resource): void {
-//   this.selectedResource = resource;
-// }
-
-getResources(): void {
-  this.resourceService.getResources().subscribe(resources => this.resources = resources.resourceList);
-}
+  getResources(): void {
+    this.resourceService.getResources().subscribe(resources => this.resources = resources.resourceList);
+  }
 
 ngOnInit(): void {
   this.getResources();

@@ -1,9 +1,21 @@
-<h1>{{title}}</h1>
+<!-- <link href="../../node_modules/@angular/material/prebuilt-themes/indigo-pink.css" rel="stylesheet"> -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-<nav>
+<app-header></app-header>
+
+
+<div class="container-fluid">
+  <nav class="container-fluid">
     <a routerLink="/browse">Browse</a>
+    <a routerLink="/events">Events</a>
     <a routerLink="/dashboard">Dashboard</a>
-    <a routerLink="/searchResults">Search Results</a>
+    <!-- <a routerLink="/searchResults">Search Results</a> -->
     <!-- <a routerLink="/resourceDetails/:resourceId">Resource Details</a> -->
   </nav>
 <router-outlet></router-outlet>
+
+</div>
+
+
+<app-footer></app-footer>
