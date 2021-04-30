@@ -10,9 +10,9 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class ResourceService {
 
-  private resourcesURL = 'http://localhost:5008/resources/browseResources';
-  private resourcesDetailsURL = 'http://localhost:5008/resources/getResourceDetails/';
-  private searchResourceURL = 'http://localhost:5008/resources/searchResource/';
+  private resourcesURL = 'http://ec2-54-160-113-120.compute-1.amazonaws.com:5008/resources/browseResources';
+  private resourcesDetailsURL = 'http://ec2-54-160-113-120.compute-1.amazonaws.com:5008/resources/getResourceDetails/';
+  private searchResourceURL = 'http://ec2-54-160-113-120.compute-1.amazonaws.com:5008/resources/searchResource/';
 
   constructor(
     private http: HttpClient
