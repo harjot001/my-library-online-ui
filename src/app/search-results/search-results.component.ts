@@ -14,7 +14,11 @@ export class SearchResultsComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private resourceService: ResourceService,
-    private location: Location) { }
+    private location: Location) { 
+      route.params.subscribe(val =>{
+        this.searchResources();
+      })
+    }
 
   ngOnInit(): void {
     this.searchResources();

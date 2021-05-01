@@ -118,6 +118,9 @@
               "devServerTarget": "library-ui-app:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@jefiozie/ngx-aws-deploy:deploy"
         }
       }
     }

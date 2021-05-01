@@ -17,12 +17,16 @@ export class HeaderComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private router: Router
-  ) { }
+  ) {
+    this.selectedCriterion = "authorName";
+    this.searchText = "";
+   }
 
   criteria: SearchCriteria[] = [
     {value: 'authorName', viewValue: 'Search By Author'},
     {value: 'description', viewValue: 'Search By Description'}
   ];
+
   selectedCriterion = "authorName";
   searchText = "";
 
@@ -30,8 +34,8 @@ export class HeaderComponent implements OnInit {
   
   ngOnInit(): void {
     console.log(this.route.snapshot)
-    this.selectedCriterion = this.route.snapshot.paramMap.get('criterion');
-    this.searchText = this.route.snapshot.paramMap.get('searchKeyword');
+    // this.selectedCriterion = this.route.snapshot.paramMap.get('criterion');
+    // this.searchText = this.route.snapshot.paramMap.get('searchKeyword');
     console.log(this.selectedCriterion);
     console.log(this.searchText);
     // this.searchResource();
@@ -40,8 +44,10 @@ export class HeaderComponent implements OnInit {
   searchResource():void{
     console.log(this.selectedCriterion);
     console.log(this.searchText);
-    this.router.navigate([ this.selectedCriterion, this.searchText], {relativeTo: this.route});
-    // window.location.href= `/searchResults/${this.selectedCriterion}/${this.searchText}`
+    // console.log(this.route);
+    // this.router.navigate(['searchResults', this.selectedCriterion, this.searchText], {relativeTo: this.route});
+    this.router.navigate(['searchResults', this.selectedCriterion, this.searchText], {relativeTo: this.route});
+
   }
 
   
