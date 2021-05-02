@@ -1,21 +1,14 @@
 
 <span></span>
 <h3>Search Results:</h3>
-<!-- <ul class="resources">
-  <li *ngFor="let resource of resources">
-    <a routerLink="/resourceDetails/{{resource.resourceId}}">
-      <span class="badge">{{resource.resourceId}}</span> {{resource.resourceName}}
-    </a>
-  </li>
-</ul> -->
 
-<ul class="resources">
-  <li *ngFor="let resource of resources">
-    <a routerLink="/resourceDetails/{{resource.resourceId}}">
-      <span class="badge">{{resource.resourceName}}</span> {{resource.authorName}}
-    </a>
-  </li>
-</ul>
+<div class="jumbotron">
+  <ul class="resources">
+    <li *ngFor="let resource of resources">
+      <a routerLink="/resourceDetails/{{resource.resourceId}}">
+        <span class="badge">{{resource.resourceName}}</span> {{resource.authorName}}
+      </a>
+    </li>
+  </ul>
+</div>
 
-
-<!-- <app-resource-details [resource] = "selectedResource"></app-resource-details> -->

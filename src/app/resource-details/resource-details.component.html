@@ -9,24 +9,25 @@
     </div> -->
 </div>
 
-<div class="container" *ngIf="resource">
+<div class="container jumbotron" *ngIf="resource">
     <div class="row justify-content-between">
         <div>
             <!-- <div><span>id: </span>{{resource.resourceId}}</div> -->
-            <div><span>Title: </span>{{resource.resourceName | uppercase}}</div>
+            <div><span>Title: </span><h3>{{resource.resourceName | uppercase}}</h3></div>
             <div><span>Author: </span>{{resource.authorName}}</div>
             <div><span>Publication Year: </span>{{resource.publicationYear}}</div>
             <div><span>Description: </span>{{resource.description}}</div>
         </div>
 
-        <div>
+        <div class="justify">
                 <button type="button" class="btn btn-primary btn-lg btn-block">Place Hold</button>
                 <button type="button" class="btn btn-primary btn-lg btn-block">Save For Later</button>
+                
         </div>
     </div>
-
 </div>
+<button type="button" class="btn btn-primary btn-lg btn-block" (click)="goBack()">Go back</button>
 
 
-<button (click)="goBack()">go back</button>
+
 

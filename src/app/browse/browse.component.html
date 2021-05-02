@@ -5,12 +5,12 @@
 
 <ul class="resources">
   <li *ngFor="let category of resources">
-      <div *ngIf="category.resources.length > 0">
+      <div *ngIf="category.resources.length > 0" class="jumbotron">
         <h3>{{category.categoryName}}</h3> 
         <ul class="resources">
           <li *ngFor="let resource of category.resources">
             <a routerLink="/resourceDetails/{{resource.resourceId}}">
-              <span class="badge">{{resource.resourceName}}</span> {{resource.authorName}}
+              <span class="badge">{{resource.resourceName}}</span>  {{resource.authorName}}
             </a>
           </li>
        </ul>

@@ -1,0 +1,65 @@
+@import '../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+You can add global styles to this file, and also import other style files
+body {
+    font-family: sans-serif ;
+    /* text-align: justify; */
+    background-color: #ce9f9f;
+}
+
+/* header {
+    /* text-align:left; */
+    /* margin: auto; */
+    /* align-content: flex-end; 
+} */
+
+h1 {
+    color: #FA8072;
+}
+label{
+    color: #1F9096 ;
+    font-family: sans-serif;
+}
+input{
+    color: lightgray;
+}
+
+
+.box {
+    height: 75px;
+    width: 75px;
+    display: inline-block;
+    margin: 0 10px 0 10px;
+}
+
+#primary1 {
+    background-color:#2FBDC5  ;
+}
+#primary2 {
+    background-color: #FA8072 ;
+}
+#primary3 {
+    background-color: gray ;
+}
+#secondary1 {
+    background-color:#9CDEE2 ;
+}
+#secondary2 {
+    background-color: #F2B086  ;
+}
+#secondary3 {
+    background-color: lightgray  ;
+}
+.font1{
+    font-style: normal;
+}
+.font2{
+    font-style: italic;
+}
+.font3{
+    font-weight: bold;
+}
+
+
+html, body { height: 100%; }
+body { margin: 5%; font-family: Roboto, "Helvetica Neue", sans-serif; }

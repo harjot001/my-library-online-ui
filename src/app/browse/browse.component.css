@@ -1,9 +1,9 @@
-/* resourcesComponent's private CSS styles */
+
 .resources {
-  margin: 2em 2em 4em 0;
+  margin: 2em 2em 4em 2em;
   list-style-type: none;
   padding: 20px;
-  width: 40em;
+  /* width: 40em; */
 }
 .resources li {
   position: relative;
@@ -15,6 +15,7 @@
 }
 
 .resources a {
+  padding: 0.4em 0.4em 0 0.4em;
   color: #333;
   text-decoration: none;
   background-color: #EEE;
@@ -41,11 +42,12 @@
   font-size: medium;
   color: white;
   padding: 0.4em 0.4em 0 0.4em;
-  background-color:#405061;
+  background-color:#8da4c0;
   line-height: 1em;
   position: relative;
   left: -1px;
-  top: -2px;
+  top: -4px;
+  bottom: 4px;
   height: 1.8em;
   min-width: 16px;
   text-align: right;
